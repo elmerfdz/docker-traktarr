@@ -18,7 +18,7 @@ if [[ ! -d /traktarr/.git ]]; then
   echo '-----------------------'
   echo
   echo "App branch is set to '$APP_BRANCH'" 
-  git clone -b "$APP_BRANCH" https://github.com/l3uddz/traktarr /"${APP_DIR}"
+  git clone -b "$APP_BRANCH" https://github.com/doob187/traktarr /"${APP_DIR}"
   echo "** Installing App Requirements **"
   pip3 install --quiet --no-cache-dir --upgrade -r /"${APP_DIR}"/requirements.txt
   ln -s /traktarr/traktarr.py /usr/local/bin/traktarr
