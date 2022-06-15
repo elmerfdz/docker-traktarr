@@ -20,6 +20,7 @@ if [[ ! -d /traktarr/.git ]]; then
   echo "App branch is set to '$APP_BRANCH'" 
   git clone -b "$APP_BRANCH" https://github.com/l3uddz/traktarr /"${APP_DIR}"
   echo "** Installing App Requirements **"
+  pip3 install --no-cache-dir --upgrade pip setuptools
   pip3 install --quiet --no-cache-dir --upgrade -r /"${APP_DIR}"/requirements.txt
   ln -s /traktarr/traktarr.py /usr/local/bin/traktarr
   echo "**** cleanup ****"
@@ -40,6 +41,7 @@ elif [[ -d /traktarr/.git ]]; then
                 cd /traktarr || return
                 git reset --hard origin/"$APP_BRANCH"
                 git pull origin "$APP_BRANCH"
+                pip3 install --no-cache-dir --upgrade pip setuptools
                 pip3 install --quiet --no-cache-dir --upgrade -r /"${APP_DIR}"/requirements.txt
         fi
 
