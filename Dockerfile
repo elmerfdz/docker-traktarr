@@ -1,5 +1,5 @@
 # hadolint ignore=DL3006,DL3007 
-FROM eafxx/alpine-python
+FROM ghcr.io/linuxserver/baseimage-alpine-python:3.11
 LABEL MAINTAINER="eafxx"
 
 ENV \
