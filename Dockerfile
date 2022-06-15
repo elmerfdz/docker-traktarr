@@ -17,7 +17,7 @@ SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN \
     chmod +x /etc/s6/init/init-stage2 && \
     chmod +x /docker-mods && \
-    apk update && apk add --no-cache curl tzdata && \
+    apk update && apk add --no-cache curl py3-pip tzdata && \
     #if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     #pip3 install --no-cache-dir --upgrade pip setuptools && \
     #if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
